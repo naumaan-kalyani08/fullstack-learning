@@ -1,11 +1,12 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
+import { Outlet } from "react-router";
 
-const WithHeaderFooter = ({ children }) => {
+const WithHeaderFooter = () => {
   return (
     <>
       <PageHeader />
-      {children}
+      <Outlet />
     </>
   );
 };
