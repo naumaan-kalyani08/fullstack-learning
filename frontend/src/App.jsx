@@ -2,7 +2,7 @@ import MainRouter from "./PageRouter/Routes";
 import "./App.css";
 const App = () => {
   return (
-    <div>
+    <div className="main-container">
       <MainRouter />
     </div>
   );

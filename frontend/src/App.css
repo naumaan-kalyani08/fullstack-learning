@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+/* make footer sticks to bottom  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
