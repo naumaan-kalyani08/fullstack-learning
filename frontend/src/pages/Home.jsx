@@ -3,7 +3,7 @@ import ReusbaleCarousal from "../components/Carousal";
 const HomePage = () => {
   return (
     <div>
-      <ReusbaleCarousal />
+      <ReusbaleCaro1usal />
     </div>
   );
 };
