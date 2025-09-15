@@ -1,7 +1,3 @@
-import React from "react";
-
-const ReusableComponents = () => {
+export const ReusablButton = () => {
   return <div>ReusableComponents</div>;
 };
-
-export default ReusableComponents;
