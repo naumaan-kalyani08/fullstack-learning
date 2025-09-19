@@ -19,3 +19,6 @@ footer {
   place-items: center;
   height: 100vh;
 }
+.common-card {
+  @apply bg-white shadow-md rounded-lg p-6 w-full max-w-md;
+}
