@@ -6,7 +6,6 @@ const Login = () => {
 
   const onFinish = async (values) => {
     try {
-      // TODO: Implement your login logic here
       console.log("Login values:", values);
       message.success("Login successful!");
     } catch (error) {
