@@ -1,11 +1,46 @@
 @import "tailwindcss";
+:root {
+  /* background-color; */
+  --primary-color: rgb(208, 243, 255);
+  --secondary-color: rgb(244, 244, 244);
+  --highlight-text-color: yellow;
+  /* background-color; */
 
-/* make footer sticks to bottom  */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  /* fonts  */
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Roboto", sans-serif;
+  --accent-font: "Courier New", Courier, monospace;
+  /* fonts  */
+
+  /* font color  */
+  --primary-font-color: rgb(33, 33, 33);
+  --secondary-font-color: rgb(117, 117, 117);
+  /* font color  */
+
+  /* font sizes */
+  --heading-font-size: 2rem;
+  --body-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  /* font sizes */
+
+  /* font weight  */
+  --body-font-weight: 400;
+  --sub-heading-font-weight-medium: 500;
+  --heading-font-weight-bold: 700;
+  /* font weight  */
+
+  /* border related */
+  --border-color: rgb(224, 224, 224);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-hover-color: rgba(0, 0, 0, 0.2);
+  --transition-duration: 0.3s;
+  --border-radius: 8px;
+  /* border related */
+  /* transition-duration  */
+  --transition-ease: ease-in-out;
+  /* transition-duration  */
 }
+/* make footer sticks to bottom  */
 .main-container {
   min-height: 100vh;
   display: flex;
