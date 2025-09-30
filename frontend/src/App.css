@@ -1,45 +1,97 @@
 @import "tailwindcss";
 :root {
-  /* background-color; */
+  /* 🎨 Base Colors */
   --primary-color: rgb(208, 243, 255);
   --secondary-color: rgb(244, 244, 244);
   --highlight-text-color: yellow;
-  /* background-color; */
 
-  /* fonts  */
+  /* Status / Utility Colors */
+  --success-color: rgb(76, 175, 80);
+  --warning-color: rgb(255, 193, 7);
+  --error-color: rgb(244, 67, 54);
+  --info-color: rgb(33, 150, 243);
+
+  /* Transparent overlays */
+  --overlay-light: rgba(255, 255, 255, 0.6);
+  --overlay-dark: rgba(0, 0, 0, 0.6);
+
+  /* Gradients */
+  --primary-gradient: linear-gradient(135deg, #d0f3ff, #80d8ff);
+  --accent-gradient: linear-gradient(135deg, #ff9a9e, #fad0c4);
+
+  /* 🖋 Fonts */
   --heading-font: "Poppins", sans-serif;
   --body-font: "Roboto", sans-serif;
   --accent-font: "Courier New", Courier, monospace;
-  /* fonts  */
 
-  /* font color  */
+  /* Font Colors */
   --primary-font-color: rgb(33, 33, 33);
   --secondary-font-color: rgb(117, 117, 117);
-  /* font color  */
 
-  /* font sizes */
+  /* Font Sizes */
   --heading-font-size: 2rem;
   --body-font-size: 1rem;
   --small-font-size: 0.875rem;
-  /* font sizes */
 
-  /* font weight  */
+  /* Font Weight */
   --body-font-weight: 400;
   --sub-heading-font-weight-medium: 500;
   --heading-font-weight-bold: 700;
-  /* font weight  */
 
-  /* border related */
+  /* Typography Extras */
+  --heading-line-height: 1.4;
+  --body-line-height: 1.6;
+  --wide-letter-spacing: 0.05em;
+  --tight-letter-spacing: -0.02em;
+
+  /* 📦 Spacing Scale */
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 3rem;
+
+  /* 📱 Layout / Container */
+  --container-max-width: 1200px;
+  --container-padding: 1rem;
+
+  /* Border Related */
   --border-color: rgb(224, 224, 224);
+  --border-radius: 8px;
+
+  /* Shadows */
   --shadow-color: rgba(0, 0, 0, 0.1);
   --shadow-hover-color: rgba(0, 0, 0, 0.2);
+
+  /* Transitions */
   --transition-duration: 0.3s;
-  --border-radius: 8px;
-  /* border related */
-  /* transition-duration  */
   --transition-ease: ease-in-out;
-  /* transition-duration  */
+
+  /* Z-index Levels */
+  --z-modal: 1000;
+  --z-dropdown: 900;
+  --z-overlay: 800;
+  --z-header: 700;
+  --z-base: 1;
 }
+
+/* 🌙 Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: rgb(30, 30, 30);
+    --secondary-color: rgb(45, 45, 45);
+
+    --primary-font-color: rgb(230, 230, 230);
+    --secondary-font-color: rgb(180, 180, 180);
+
+    --border-color: rgb(60, 60, 60);
+    --shadow-color: rgba(0, 0, 0, 0.6);
+    --shadow-hover-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
 /* make footer sticks to bottom  */
 .main-container {
   min-height: 100vh;
