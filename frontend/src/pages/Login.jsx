@@ -13,13 +13,24 @@ const Login = () => {
     }
   };
 
+  // Handlers for navigation (replace with your routing logic)
+  const handleSignUp = () => {
+    // e.g., navigate("/signup");
+    message.info("Redirect to Sign Up page");
+  };
+
+  const handleForgotPassword = () => {
+    // e.g., navigate("/forgot-password");
+    message.info("Redirect to Forgot Password page");
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <Card
-        title="Login"
         className="w-full max-w-md shadow-md"
         headStyle={{ textAlign: "center", fontSize: "1.5rem" }}
       >
+        <p className="text-center pb-4"> Login</p>
         <Form
           form={form}
           name="login"
@@ -50,6 +61,13 @@ const Login = () => {
 
           <Form.Item className="mb-0">
             <Button
+              type="link"
+              className="text-center w-100"
+              onClick={handleForgotPassword}
+            >
+              Forgot Password?
+            </Button>
+            <Button
               type="primary"
               htmlType="submit"
               className="w-full"
@@ -59,6 +77,11 @@ const Login = () => {
             </Button>
           </Form.Item>
         </Form>
+        <div className="">
+          <Button className="w-100" onClick={handleSignUp}>
+            Sign Up
+          </Button>
+        </div>
       </Card>
     </div>
   );
