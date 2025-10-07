@@ -24,6 +24,7 @@ import {
   TrophyOutlined,
   RocketOutlined,
 } from "@ant-design/icons";
+import CartPopup from "./CartPopup";
 
 const { Title, Text, Paragraph } = Typography;
 const { Panel } = Collapse;
@@ -395,6 +396,17 @@ export default function ProductDetailPage() {
             </Card>
           </Col>
         </Row>
+
+        <div
+          style={{
+            position: "fixed",
+            top: "20px",
+            right: "20px",
+            zIndex: 1000,
+          }}
+        >
+          <CartPopup />
+        </div>
       </div>
     </div>
   );
