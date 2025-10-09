@@ -15,7 +15,8 @@ import {
   SendOutlined,
 } from "@ant-design/icons";
 import ReusbaleCarousal from "../components/Carousal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import OfferPopup from "../components/OfferPopup";
 
 const { Content } = Layout;
 const { Title, Paragraph } = Typography;
@@ -24,6 +25,7 @@ const { Meta } = Card;
 const HomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [showOffer, setShowOffer] = useState(false);
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
@@ -34,6 +36,18 @@ const HomePage = () => {
     setIsModalOpen(false);
     setSelectedProduct(null);
   };
+
+  const handleOfferClose = () => {
+    setShowOffer(false);
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowOffer(true);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const categories = [
     { title: "Electronics", icon: <ShoppingOutlined /> },
@@ -174,8 +188,24 @@ const HomePage = () => {
           )}
         </Modal>
       </Content>
+
+      {/* Offer Popup Component */}
+      <OfferPopup open={showOffer} onClose={handleOfferClose} />
     </Layout>
   );
 };
+
+// export default HomePage;
+// import React from "react";
+// import ProductDetailPage from "./ProductDetailPage";
+// import ProductPage from "./ProductPage";
+
+// const Home = () => {
+//   return (
+//     <div>
+//       <ProductPage />
+//     </div>
+//   );
+// };
 
 export default HomePage;
