@@ -146,7 +146,6 @@ const HomePage = () => {
 
         {/* Product Detail Modal */}
         <Modal
-          className="NK"
           title={selectedProduct?.title}
           open={isModalOpen}
           onCancel={handleModalClose}
